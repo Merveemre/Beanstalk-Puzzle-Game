@@ -14,7 +14,7 @@ public class CharactersTest {
         System.out.println(characters.getCharacterSymbolMeaning('B'));
         System.out.println(characters.getCharacterSymbolMeaning('X'));
         System.out.println(characters.getCharacterSymbolMeaning('F'));
-        System.out.println(characters.getCharacterSymbolMeaning('W'));
+        System.out.println(characters.getCharacterSymbolMeaning('H'));
         System.out.println(characters.getCharacterSymbolMeaning('#'));
     }
 

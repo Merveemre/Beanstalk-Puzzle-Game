@@ -47,6 +47,11 @@ public class BeanstalkGame extends Game {
 
     }
 
+    @Override
+    public boolean isPushableItem(int newManX, int newManY) {
+        return false;
+    }
+
     public int getCell(int x, int y) {
         return maze[y][x];
     }
@@ -154,15 +159,56 @@ public class BeanstalkGame extends Game {
 
     }
 
-    @Override
-    public boolean isPushableItem(int newManX, int newManY) {
-        return false;
+    private boolean isHydration(int nextX, int nextY) {
+        return true;
+    }
+
+    private boolean isFertilizer(int nextX, int nextY) {
+        return true;
+    }
+
+    private boolean isShovel(int nextX, int nextY) {
+        return true;
+    }
+
+    private boolean isBean(int nextX, int nextY) {
+        return true;
     }
 
     @Override
     public void pushItem(int newManX, int newManY, int dx, int dy) {
+        // Yeni konumun bir sonraki hücresini al
+        int nextX = newManX + dx;
+        int nextY = newManY + dy;
 
+        // Hedef konumda itilebilir bir obje var mı kontrol et
+        if (isPushableItem(nextX, nextY)) {
+            // İtemi işlemini gerçekleştir
+            if (isBean(nextX, nextY)) {
+                bean[nextX][nextY] = false;
+                bean[nextX + dx][nextY + dy] = true;
+            } else if (isShovel(nextX, nextY)) {
+                shovel[nextX][nextY] = false;
+                shovel[nextX + dx][nextY + dy] = true;
+            } else if (isFertilizer(nextX, nextY)) {
+                fertilizer[nextX][nextY] = false;
+                fertilizer[nextX + dx][nextY + dy] = true;
+            } else if (isHydration(nextX, nextY)) {
+                hydration[nextX][nextY] = false;
+                hydration[nextX + dx][nextY + dy] = true;
+            }
+
+            // Adamın konumunu güncelle
+            manX = newManX;
+            manY = newManY;
+        } else {
+            // İtme işlemi yapılamıyorsa sadece adamın konumunu güncelle
+            manX = newManX;
+            manY = newManY;
+        }
     }
+
+
 
 
 }

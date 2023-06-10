@@ -26,7 +26,6 @@ public abstract class Item {
 
     public abstract char getSymbol();
 
+
     public abstract boolean isPushableItem(int newManX, int newManY);
-
-
 }

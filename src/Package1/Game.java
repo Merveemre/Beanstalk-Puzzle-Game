@@ -1,9 +1,7 @@
 package Package1;
-
-import java.util.Scanner;
-
 public abstract class Game {
-    protected int x, y;
+    private int x;
+    private int y;
 
     public Game(int x, int y) {
         this.x = x;
@@ -26,24 +24,6 @@ public abstract class Game {
         this.y = y;
     }
 
-    public abstract void play();
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Click Enter to Play");
-        scanner.nextLine();
-        Game game = new BeanstalkGame(20, 20);
-        game.play();
-    }
-
-    public abstract void initializeGame();
-
-    public abstract String getGameState();
-
-    public abstract void moveItem(int nextX, int nextY, int next2X, int next2Y);
-
-    public abstract boolean isPushableItem(int newManX, int newManY);
-
     public void pushItem(int dx, int dy) {
         // Yeni adam konumu
         int newManX = getX() + dx;
@@ -65,6 +45,14 @@ public abstract class Game {
             setY(newManY);
         }
     }
+
+    public abstract boolean isPushableItem(int newManX, int newManY);
+
+    public abstract void initializeGame();
+
+    public abstract String getGameState();
+
+    public abstract void moveItem(int newManX, int newManY, int newItemX, int newItemY);
 
     public abstract void pushItem(int newManX, int newManY, int dx, int dy);
 }

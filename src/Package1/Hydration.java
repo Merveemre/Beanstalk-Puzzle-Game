@@ -13,7 +13,7 @@ public class Hydration extends Item {
     }
     @Override
     public boolean isPushableItem(int newManX, int newManY) {
-        // Hydration nesnesi her zaman itilebilir olduğu için true döndürülür
+        // Sulama nesnesi her zaman itilebilir olduğu için true döndürülür
         return true;
     }
 

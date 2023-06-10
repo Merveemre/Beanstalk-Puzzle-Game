@@ -3,5 +3,5 @@ S - Shovel
 B - Bean
 X - Goal
 F - Fertilizer
-W - Water
+H - Hydration
 # - Wall
