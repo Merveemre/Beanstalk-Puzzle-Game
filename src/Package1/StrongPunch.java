@@ -43,8 +43,4 @@ public class StrongPunch implements Move {
         }
     }
 
-    @Override
-    public Move selectMove() {
-        return new StrongPunch();
-    }
 }

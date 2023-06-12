@@ -41,8 +41,4 @@ public class Pull implements Move {
         }
     }
 
-    @Override
-    public Move selectMove() {
-        return new Pull();
-    }
 }

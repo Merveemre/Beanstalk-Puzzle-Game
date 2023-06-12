@@ -42,8 +42,4 @@ public class Slide implements Move {
         man.moveMan(nextX - man.getX(), nextY - man.getY());
     }
 
-    @Override
-    public Move selectMove() {
-        return new Slide();
-    }
 }

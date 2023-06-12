@@ -48,11 +48,10 @@ public abstract class Game {
 
     public abstract boolean isPushableItem(int newManX, int newManY);
 
-    public abstract void initializeGame();
-
-    public abstract String getGameState();
-
     public abstract void moveItem(int newManX, int newManY, int newItemX, int newItemY);
 
     public abstract void pushItem(int newManX, int newManY, int dx, int dy);
+
+    public void play() {
+    }
 }
