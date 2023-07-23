@@ -1,0 +1,3 @@
+The object-oriented analysis and design game project "BeanstalkGame" descriptions:
+
+The game revolves around a farmer character (Man), who aims to push objects within a maze towards the target. The project utilizes the "SINGLETON" design pattern to handle text files, which include map information, game control keys, and character details. Every 10 moves, Man (farmer) gains new capabilities through the implementation of the "STRATEGY" design pattern. These additional abilities consist of "run," "pull," "slide," "strong push," and "strong pull" options.
