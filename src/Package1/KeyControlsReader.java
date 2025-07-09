@@ -39,7 +39,7 @@ public class KeyControlsReader {
     }
 
     private void loadControlsFromFile() {
-        String filePath = "C:\\Users\\Merveler\\Desktop\\IKCU Yazilim\\Nesne Yönelimli Analiz ve Tasarım\\MerveEmreY220240194\\src\\key_controls.txt";
+        String filePath = "C:\\BeansTalkGame\\src\\key_controls.txt";
 
         try {
             File file = new File(filePath);
