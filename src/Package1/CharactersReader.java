@@ -32,7 +32,7 @@ public class CharactersReader {
 
     private void loadCharacterSymbolsFromFile() {
         try {
-            File file = new File("C:\\Users\\Merveler\\Desktop\\IKCU Yazilim\\Nesne Yönelimli Analiz ve Tasarım\\MerveEmreY220240194\\src\\character_symbols.txt");
+            File file = new File("C:\\Desktop\\BeanstalkGame\\src\\character_symbols.txt");
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
