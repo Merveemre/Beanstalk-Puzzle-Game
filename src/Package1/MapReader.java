@@ -24,7 +24,7 @@ public class MapReader {
     }
 
     private void loadMapFromFile() {
-        String filePath = "C:\\Users\\Merveler\\Desktop\\IKCU Yazilim\\Nesne Yönelimli Analiz ve Tasarım\\MerveEmreY220240194\\src\\map.txt";
+        String filePath = "("C:\\Desktop\\BeanstalkGame\\src\\map.txt")";
 
         try {
             File file = new File(filePath);
