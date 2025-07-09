@@ -39,7 +39,7 @@ public class KeyControlsReader {
     }
 
     private void loadControlsFromFile() {
-        String filePath = "C:\\BeansTalkGame\\src\\key_controls.txt";
+        String filePath = "C:\\Desktop\\BeanstalkGame\\src\\character_symbols.txt";
 
         try {
             File file = new File(filePath);
